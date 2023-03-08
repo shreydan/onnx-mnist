@@ -3,6 +3,10 @@ function setup() {
   canvas.parent("#container");
 }
 
+function clear() {
+  background(0);
+}
+
 function draw() {
   background(0);
 }

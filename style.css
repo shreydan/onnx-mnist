@@ -10,9 +10,12 @@ canvas {
     border: 8px solid #aeaeae;
 }
 
-h2 {
+#heading {
     position: absolute;
     top: 3%;
     left: 3%;
     font-family: monospace;
+}
+#heading a {
+    font-size: 1.5rem;
 }
