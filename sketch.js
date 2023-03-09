@@ -1,3 +1,5 @@
+const outputElement = document.querySelector("#prediction");
+
 const modelPath = "./model/mnist.onnx";
 const sessionOptions = {
   executionProviders: ["wasm", "webgl"],
@@ -15,8 +17,6 @@ async function createInferenceSession() {
   }
 }
 
-const outputElement = document.querySelector("#prediction");
-
 function argmax(preds) {
   let max = 0;
   for (let i = 0; i < preds.length; i++) {
@@ -32,7 +32,6 @@ async function predict(matrix) {
     feeds[inferenceSession.inputNames[0]] = inputTensor;
     const results = await inferenceSession.run(feeds);
     const preds = results[inferenceSession.outputNames[0]].data;
-
     outputElement.innerHTML = argmax(preds);
   } catch (e) {
     console.log(`failed to inference ONNX model: ${e}.`);
