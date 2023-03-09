@@ -50,6 +50,7 @@ function setup() {
   const clearBtn = document.querySelector("#clear");
   clearBtn.addEventListener("click", () => {
     background(0);
+    outputElement.innerHTML = "_";
   });
 
   createInferenceSession();
