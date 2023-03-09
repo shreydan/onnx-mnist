@@ -10,6 +10,14 @@ canvas {
     border: 8px solid #aeaeae;
 }
 
+#instructions {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10%;
+    font-family: monospace;
+}
+
 #heading {
     position: absolute;
     top: 3%;
